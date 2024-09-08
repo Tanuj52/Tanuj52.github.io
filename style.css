@@ -1,21 +1,16 @@
 /* General Styles */
-*{
-    margin:0;
-    padding:0;
-}
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #caf0f8; /* Almost White Blue */
 }
 
 header {
-    background-color: #222;
-    color: white;
+    background-color: #03045e; /* Dark Blue */
+    color: #fff;
 }
 
 nav ul {
@@ -31,7 +26,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding: 15px 20px;
     display: block;
@@ -39,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #0077b6; /* Medium Blue */
     transform: scale(1.05);
 }
 
@@ -56,7 +51,7 @@ section {
 .cover-image img {
     width: 100%;
     height: auto;
-    border-bottom: 5px solid #eee;
+    border-bottom: 5px solid #e0f7fa; /* Very Light Blue */
 }
 
 .profile {
@@ -76,12 +71,12 @@ section {
 
 .description h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #023e8a; /* Deep Blue */
 }
 
 .description p {
     font-size: 1.2rem;
-    color: #666;
+    color: #0077b6; /* Light Blue */
 }
 
 /* Skills Section */
@@ -97,23 +92,23 @@ section {
 
 .skills-category h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #03045e; /* Dark Blue */
     margin-bottom: 10px;
 }
 
 .skill-box {
-    background-color: #e0e0e0;
+    background-color: #90e0ef; /* Very Light Blue */
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 8px;
     text-align: center;
     font-size: 1.1rem;
-    color: #555;
+    color: #333;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-box:hover {
-    background-color: #c0c0c0;
+    background-color: #48cae4; /* Light Sky Blue */
     transform: scale(1.05);
 }
 
@@ -139,7 +134,7 @@ section {
 
 .certificate-description p {
     font-size: 1rem;
-    color: #555;
+    color: #0077b6; /* Light Blue */
 }
 
 .certificate-image img {
@@ -181,25 +176,25 @@ section {
 
 .contact-info a {
     display: block;
-    color: #0066cc;
+    color: #0096c7; /* Light Blue */
     font-size: 1.2rem;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #004d99;
+    color: #0077b6; /* Medium Blue */
 }
 
 .contact-info p {
     font-size: 1rem;
-    color: #555;
+    color: #0077b6; /* Light Blue */
 }
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: white;
+    background-color: #03045e; /* Dark Blue */
+    color: #fff;
     text-align: center;
     padding: 10px 0;
 }
