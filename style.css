@@ -118,10 +118,9 @@ nav ul li a:hover {
 /* Certificates Section */
 .certificates-slider {
     display: flex;
-    overflow: hidden; /* Prevents overlapping and ensures proper sliding */
+    overflow: hidden; /* Hide overflow to avoid visual issues */
     padding: 2rem;
     margin-top: 2rem;
-    position: relative; /* Relative positioning to handle absolute children */
 }
 
 .certificate-item {
@@ -129,7 +128,7 @@ nav ul li a:hover {
     align-items: center;
     margin-right: 2rem;
     flex: 0 0 auto;
-    min-width: 300px; /* Adjusted minimum width to increase size by 50% */
+    min-width: 280px; /* Adjusted minimum width to fit the size properly */
 }
 
 .certificate-description {
@@ -139,12 +138,18 @@ nav ul li a:hover {
     border-radius: 5px;
     margin-right: 1rem;
     max-width: 50%; /* Ensures description doesn't overflow */
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 .certificate-image img {
-    width: 300px; /* Increased size by 50% */
+    width: 200px; /* Original size, no increase */
     height: auto;
     border-radius: 5px;
+}
+
+/* Ensure that no unintended overflow occurs */
+.certificates-slider::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for a cleaner look */
 }
 
 /* Projects Section */
