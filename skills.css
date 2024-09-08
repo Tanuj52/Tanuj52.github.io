@@ -1,10 +1,12 @@
-/* Skills Section */
+/* Skills Section Styles */
 .skills-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
     padding: 60px 20px;
     background: #fff;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out;
@@ -16,22 +18,33 @@
 
 .skills-category h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #03045e; /* Dark Blue */
     margin-bottom: 10px;
 }
 
 .skill-box {
-    background-color: #e0e0e0;
+    background-color: #90e0ef; /* Very Light Blue */
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 8px;
     text-align: center;
     font-size: 1.1rem;
-    color: #555;
+    color: #333;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-box:hover {
-    background-color: #c0c0c0;
+    background-color: #48cae4; /* Light Sky Blue */
     transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-box {
+        width: 100%;
+    }
 }
