@@ -1,8 +1,9 @@
-/* Contact Section */
+/* Contact Section Styles */
 .contact-info {
     text-align: center;
     padding: 60px 20px;
     background: #fff;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out;
@@ -10,17 +11,17 @@
 
 .contact-info a {
     display: block;
-    color: #0066cc;
+    color: #0096c7; /* Light Blue */
     font-size: 1.2rem;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #004d99;
+    color: #0077b6; /* Medium Blue */
 }
 
 .contact-info p {
     font-size: 1rem;
-    color: #555;
+    color: #0077b6; /* Light Blue */
 }
