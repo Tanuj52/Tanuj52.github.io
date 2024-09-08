@@ -228,3 +228,44 @@ footer {
         transform: translateX(0);
     }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-box {
+        width: 100%;
+    }
+
+    .certificates-slider {
+        flex-direction: column;
+    }
+
+    .certificate-item {
+        width: 100%;
+    }
+
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-images,
+    .project-description {
+        width: 100%;
+    }
+}
