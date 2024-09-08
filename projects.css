@@ -1,4 +1,4 @@
-/* Projects Section */
+/* Projects Section Styles */
 .project-item {
     margin-bottom: 30px;
     padding: 60px 20px;
@@ -15,24 +15,28 @@
 
 .project-images {
     width: 50%;
+    overflow: hidden; /* To contain scrolling images */
 }
 
 .project-images img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.5s ease;
 }
 
 .project-description {
     width: 50%;
 }
 
-.project-description h2 {
-    font-size: 1.8rem;
-    color: #333;
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
 
-.project-description p {
-    font-size: 1.1rem;
-    color: #666;
+    .project-images,
+    .project-description {
+        width: 100%;
+    }
 }
