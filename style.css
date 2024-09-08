@@ -1,12 +1,13 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #121212; /* Dark background */
     color: #E0E1DD; /* Light text color */
     margin: 0;
     padding: 0;
 }
 
+/* Navbar */
 header {
     position: fixed;
     width: 100%;
@@ -38,6 +39,13 @@ nav ul li a:hover {
     color: #C3073F; /* Accent color for hover effect */
 }
 
+/* Cover Image */
+.cover-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 .cover-image img {
     width: 100%;
     height: auto;
@@ -49,12 +57,15 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    margin-top: 5rem; /* Space to push below the navbar */
+    position: relative;
+    z-index: 1;
 }
 
 .profile-pic img {
-    border-radius: 50%;
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
+    border-radius: 0; /* No circular */
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Adjust size as needed */
     object-fit: cover;
 }
 
@@ -65,17 +76,28 @@ nav ul li a:hover {
 
 .description h1 {
     color: #E0E1DD; /* Light text color */
+    font-size: 2.5rem; /* Larger font size */
 }
 
+.description p {
+    color: #E0E1DD; /* Light text color */
+    font-size: 1.2rem; /* Adjust as needed */
+}
+
+/* Skills Section */
 .skills-container {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+    margin-top: 2rem;
 }
 
 .skills-category {
     flex: 1;
     margin-right: 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .skills-category:last-child {
@@ -90,12 +112,15 @@ nav ul li a:hover {
     border-radius: 5px;
     display: inline-block;
     font-size: 1rem;
+    white-space: nowrap; /* Avoid long boxes */
 }
 
+/* Certificates Section */
 .certificates-slider {
     display: flex;
     overflow-x: auto;
     padding: 2rem;
+    margin-top: 2rem;
 }
 
 .certificate-item {
@@ -106,10 +131,11 @@ nav ul li a:hover {
 }
 
 .certificate-image img {
-    width: 150px; /* Adjust size as needed */
+    width: 200px; /* Medium size */
     height: auto;
 }
 
+/* Projects Section */
 .project-item {
     margin: 2rem 0;
 }
@@ -117,6 +143,7 @@ nav ul li a:hover {
 .project-content {
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .project-images {
@@ -130,15 +157,12 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
-.project-description {
-    flex: 1;
-    padding-left: 1rem;
-}
-
+/* Contact Section */
 .contact-info a {
-    color: #1F4068; /* Deep blue accent */
+    color: #C3073F; /* Accent color */
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -146,6 +170,7 @@ footer {
     color: #E0E1DD; /* Light text color */
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .profile {
         flex-direction: column;
