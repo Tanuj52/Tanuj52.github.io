@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #121212; /* Dark background */
     color: #E0E1DD; /* Light text color */
     margin: 0;
@@ -38,6 +38,10 @@ nav ul li a:hover {
     color: #C3073F; /* Accent color for hover effect */
 }
 
+.cover-image {
+    position: relative;
+}
+
 .cover-image img {
     width: 100%;
     height: auto;
@@ -49,6 +53,9 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    margin-top: -8rem; /* Adjust based on your cover image size */
+    position: relative;
+    z-index: 1;
 }
 
 .profile-pic img {
@@ -105,8 +112,12 @@ nav ul li a:hover {
     flex: 0 0 auto;
 }
 
+.certificate-description {
+    margin-right: 1rem;
+}
+
 .certificate-image img {
-    width: 150px; /* Adjust size as needed */
+    width: 200px; /* Adjust size as needed */
     height: auto;
 }
 
@@ -163,9 +174,10 @@ footer {
 
     .skills-category {
         margin-right: 0;
+        margin-bottom: 2rem;
     }
 
-    .project-content {
+    .certificates-slider, .project-content {
         flex-direction: column;
     }
 }
