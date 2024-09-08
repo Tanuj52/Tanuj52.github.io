@@ -1,12 +1,14 @@
-/* Certifications Section */
+/* Certifications Section Styles */
 .certificates-slider {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 60px 20px;
     background: #fff;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
 }
 
 .certificate-item {
@@ -24,15 +26,22 @@
 
 .certificate-description p {
     font-size: 1rem;
-    color: #555;
-}
-
-.certificate-image {
-    width: 50%;
+    color: #0077b6; /* Light Blue */
 }
 
 .certificate-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .certificates-slider {
+        flex-direction: column;
+    }
+
+    .certificate-item {
+        width: 100%;
+    }
 }
