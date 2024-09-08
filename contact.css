@@ -1,0 +1,26 @@
+/* Contact Section */
+.contact-info {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-info a {
+    display: block;
+    color: #0066cc;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #004d99;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+}
