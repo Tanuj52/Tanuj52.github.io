@@ -3,53 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K R Tanuj - Portfolio</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="certifications.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+    <script defer src="main.js"></script>
+    <script defer src="about.js"></script>
+    <script defer src="skills.js"></script>
+    <script defer src="certifications.js"></script>
+    <script defer src="projects.js"></script>
+    <script defer src="contact.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">K R Tanuj</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="container">
             <div class="cover-image">
-                <img src="cover.jpg" alt="Cover Image">
+                <img src="cover.jpg" alt="Cover Image" class="img-fluid">
             </div>
-            <div class="profile">
+            <div class="profile d-flex align-items-center">
+                <div class="profile-pic">
+                    <img src="profile-pic.JPG" alt="Profile Picture" class="img-fluid">
+                </div>
                 <div class="description">
                     <h1>Welcome to My Portfolio</h1>
-                    <p>Hi, I'm K R Tanuj. I am currently pursuing a Bachelor's in Data Science Engineering, aspiring to become a Full-Stack Developer, Cybersecurity Analyst, and Data Analyst. This portfolio showcases my skills, certifications, and projects.</p>
-                </div>
-                <div class="profile-pic">
-                    <img src="profile-pic.JPG" alt="Profile Picture">
+                    <p>I'm K R Tanuj, a passionate individual pursuing a career in full-stack development, data analysis, and cybersecurity. Here you'll find details about my skills, certifications, and projects.</p>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="container">
             <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skills-category">
+            <div class="skills-container row">
+                <div class="skills-category col-md-6" id="full-stack">
                     <h3>Full Stack Development</h3>
                     <div class="skill-box">HTML</div>
                     <div class="skill-box">CSS</div>
                     <div class="skill-box">JavaScript</div>
+                    <div class="skill-box">Bootstrap</div>
                     <div class="skill-box">React</div>
                     <div class="skill-box">Node.js</div>
-                    <div class="skill-box">Express.js</div>
                 </div>
-                <div class="skills-category">
+                <div class="skills-category col-md-6" id="data-analysis">
                     <h3>Data Analysis</h3>
                     <div class="skill-box">Python</div>
                     <div class="skill-box">R</div>
@@ -59,48 +85,48 @@
             </div>
         </section>
 
-        <section id="certifications">
+        <section id="certifications" class="container">
             <h2>Certifications</h2>
             <div class="certificates-slider">
-                <div class="certificate-item">
+                <div class="certificate-item d-flex">
                     <div class="certificate-description">
-                        <p>Google AI Essentials - This certification covers foundational concepts in AI and machine learning.</p>
+                        <p>Google AI Essentials: An introductory course on AI concepts and applications.</p>
                     </div>
                     <div class="certificate-image">
-                        <img src="Google AI Essentials.png" alt="Google AI Essentials">
+                        <img src="Google AI Essentials.png" alt="Google AI Essentials" class="img-fluid">
                     </div>
                 </div>
-                <div class="certificate-item">
+                <div class="certificate-item d-flex">
                     <div class="certificate-description">
-                        <p>AWS Cloud Practitioner Essentials - This certification demonstrates a foundational understanding of AWS Cloud.</p>
+                        <p>AWS Cloud Practitioner Essentials: Fundamental concepts of AWS cloud computing.</p>
                     </div>
                     <div class="certificate-image">
-                        <img src="AWS Cloud Practitioner Essentials.png" alt="AWS Cloud Practitioner Essentials">
+                        <img src="AWS Cloud Practitioner Essentials.png" alt="AWS Cloud Practitioner Essentials" class="img-fluid">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="container">
             <h2>Projects</h2>
             <div class="project-item">
                 <h3>Traffic Management in Smart Cities</h3>
-                <div class="project-content">
+                <div class="project-content d-flex">
                     <div class="project-images">
-                        <img src="Picture 1.png" alt="Project Screenshot">
-                        <img src="Picture 2.png" alt="Project Screenshot">
-                        <img src="Picture 3.png" alt="Project Screenshot">
-                        <img src="Picture 4.png" alt="Project Screenshot">
-                        <img src="Picture 5.png" alt="Project Screenshot">
+                        <img src="Picture 1.png" alt="Traffic Management Image 1" class="img-fluid">
+                        <img src="Picture 2.png" alt="Traffic Management Image 2" class="img-fluid">
+                        <img src="Picture 3.png" alt="Traffic Management Image 3" class="img-fluid">
+                        <img src="Picture 4.png" alt="Traffic Management Image 4" class="img-fluid">
+                        <img src="Picture 5.png" alt="Traffic Management Image 5" class="img-fluid">
                     </div>
                     <div class="project-description">
-                        <p>This project focuses on optimizing traffic flow in smart cities using advanced algorithms and data analysis.</p>
+                        <p>A project focused on optimizing traffic flow in smart cities using advanced algorithms and real-time data analysis.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="container">
             <h2>Contact Me</h2>
             <div class="contact-info">
                 <a href="https://www.linkedin.com/in/krtanuj/" target="_blank">LinkedIn Profile</a>
@@ -110,8 +136,12 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-center text-light py-3">
         <p>&copy; 2024 K R Tanuj. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
