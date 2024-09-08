@@ -1,18 +1,19 @@
-/* General Styles */
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #E0E1DD; /* Light text color */
+    background-color: #0d1b2a; /* Dark background */
+    color: #e0e1dd; /* Light font color */
     margin: 0;
     padding: 0;
 }
 
 header {
+    background-color: #1b263b; /* Darker shade for the navbar */
+    padding: 1rem;
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header */
-    padding: 1rem;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
@@ -29,155 +30,94 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #E0E1DD; /* Light text color */
+    color: #e0e1dd; /* Light color for nav links */
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 nav ul li a:hover {
-    color: #C3073F; /* Accent color for hover effect */
+    color: #415a77; /* Light blue for hover effect */
 }
 
 .cover-image {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    z-index: -1;
 }
 
 .cover-image img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .profile {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 300px; /* Adjust based on cover image height */
     padding: 2rem;
-    margin-top: -8rem; /* Adjust based on your cover image size */
-    position: relative;
-    z-index: 1;
+}
+
+.profile-pic {
+    margin-top: 1rem;
 }
 
 .profile-pic img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    object-fit: cover;
 }
 
-.description {
-    flex: 1;
-    padding-right: 2rem;
-}
-
-.description h1 {
-    color: #E0E1DD; /* Light text color */
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-between;
+main {
     padding: 2rem;
 }
 
-.skills-category {
-    flex: 1;
-    margin-right: 2rem;
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent containers */
+    border-radius: 8px;
 }
 
-.skills-category:last-child {
-    margin-right: 0;
+h1, h2, h3 {
+    color: #e0e1dd; /* Title color */
 }
 
-.skill-box {
-    background-color: #1B263B; /* Darker container background */
-    color: #E0E1DD; /* Light text color */
-    padding: 0.5rem 1rem;
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+.skills-container, .certificates-slider, .project-item {
+    margin: 1rem 0;
+}
+
+.skill-box, .certificate-item, .project-content {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent for skill boxes and project content */
+    border-radius: 4px;
+    padding: 0.5rem;
     margin: 0.5rem 0;
-    border-radius: 5px;
-    display: inline-block;
-    font-size: 1rem;
+    color: #e0e1dd; /* Text color */
 }
 
-.certificates-slider {
-    display: flex;
-    overflow-x: auto;
-    padding: 2rem;
-}
-
-.certificate-item {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    flex: 0 0 auto;
-}
-
-.certificate-description {
-    margin-right: 1rem;
-}
-
-.certificate-image img {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-}
-
-.project-item {
-    margin: 2rem 0;
-}
-
-.project-content {
-    display: flex;
-    align-items: center;
-}
-
-.project-images {
-    flex: 1;
-    overflow: hidden;
-}
-
-.project-images img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-.project-description {
-    flex: 1;
-    padding-left: 1rem;
-}
-
-.contact-info a {
-    color: #1F4068; /* Deep blue accent */
+.contact-info {
+    color: #e0e1dd;
 }
 
 footer {
-    text-align: center;
+    background-color: #1b263b; /* Darker shade for footer */
     padding: 1rem;
-    background-color: #1B263B; /* Darker background */
-    color: #E0E1DD; /* Light text color */
-}
-
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-pic img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .skills-category {
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .certificates-slider, .project-content {
-        flex-direction: column;
-    }
+    text-align: center;
+    color: #e0e1dd;
 }
