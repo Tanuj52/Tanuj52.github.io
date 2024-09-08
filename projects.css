@@ -1,0 +1,38 @@
+/* Projects Section */
+.project-item {
+    margin-bottom: 30px;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.project-content {
+    display: flex;
+    gap: 20px;
+}
+
+.project-images {
+    width: 50%;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-description {
+    width: 50%;
+}
+
+.project-description h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.project-description p {
+    font-size: 1.1rem;
+    color: #666;
+}
