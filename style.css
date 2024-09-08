@@ -118,33 +118,33 @@ nav ul li a:hover {
 /* Certificates Section */
 .certificates-slider {
     display: flex;
-    overflow: hidden; /* Hide horizontal scrollbar */
+    overflow: hidden; /* Prevents overlapping and ensures proper sliding */
     padding: 2rem;
     margin-top: 2rem;
-    position: relative;
+    position: relative; /* Relative positioning to handle absolute children */
 }
 
 .certificate-item {
     display: flex;
     align-items: center;
-    min-width: 100%; /* Full width for each certificate item */
-    box-sizing: border-box;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    margin-right: 2rem;
+    flex: 0 0 auto;
+    min-width: 300px; /* Adjusted minimum width to increase size by 50% */
 }
 
 .certificate-description {
-    flex: 1;
-    margin-right: 1rem;
     color: #E0E1DD; /* Light text color */
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
     border-radius: 5px;
+    margin-right: 1rem;
+    max-width: 50%; /* Ensures description doesn't overflow */
 }
 
 .certificate-image img {
-    width: 200px; /* Medium size */
+    width: 300px; /* Increased size by 50% */
     height: auto;
+    border-radius: 5px;
 }
 
 /* Projects Section */
