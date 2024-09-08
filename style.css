@@ -1,241 +1,183 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #E0E1DD; /* Light text color */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #03045e;
-    color: white;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header */
+    padding: 1rem;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 20px 30px;
-    display: block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    background-color: #023e8a;
-    transform: scale(1.05);
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-    background: #ffffff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-out;
-}
-
-.cover-image img {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    border-bottom: 5px solid #eee;
-    display: block;
-    margin: 0 auto;
-}
-
-.profile {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    animation: slideIn 1s ease-out;
 }
 
-.profile-pic img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+nav ul li {
+    margin: 0 1rem;
 }
 
-.description h1 {
-    font-size: 2.5rem;
-    color: #03045e;
-}
-
-.description p {
-    font-size: 1.2rem;
-    color: #0077b6;
-}
-
-/* Skills Section */
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.skills-category {
-    width: 48%;
-}
-
-.skills-category h3 {
-    font-size: 1.5rem;
-    color: #03045e;
-    margin-bottom: 10px;
-}
-
-.skill-box {
-    background-color: #e0e0e0;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: #555;
-    display: inline-block;
-    white-space: nowrap;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.skill-box:hover {
-    background-color: #c0c0c0;
-    transform: scale(1.05);
-}
-
-/* Certifications Section */
-.certificates-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    scroll-snap-type: x mandatory;
-}
-
-.certificate-item {
-    display: flex;
-    flex-shrink: 0;
-    width: 300px;
-    scroll-snap-align: start;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.certificate-description {
-    width: 50%;
-    padding: 10px;
-}
-
-.certificate-description p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.certificate-image img {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Projects Section */
-.project-item {
-    margin-bottom: 40px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-content {
-    display: flex;
-    gap: 20px;
-}
-
-.project-images {
-    width: 50%;
-    overflow: hidden;
-    position: relative;
-}
-
-.project-slider {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
-}
-
-.project-slider img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    object-fit: cover;
-}
-
-.project-description {
-    width: 50%;
-}
-
-.project-description p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Contact Section */
-.contact-info {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.contact-info a {
-    color: #0077b6;
+nav ul li a {
+    color: #E0E1DD; /* Light text color */
     text-decoration: none;
     font-weight: bold;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    color: #C3073F; /* Accent color for hover effect */
 }
 
-/* Footer */
+.cover-image {
+    position: relative;
+}
+
+.cover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: -8rem; /* Adjust based on your cover image size */
+    position: relative;
+    z-index: 1;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    object-fit: cover;
+}
+
+.description {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.description h1 {
+    color: #E0E1DD; /* Light text color */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.skills-category {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.skills-category:last-child {
+    margin-right: 0;
+}
+
+.skill-box {
+    background-color: #1B263B; /* Darker container background */
+    color: #E0E1DD; /* Light text color */
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.certificates-slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 2rem;
+}
+
+.certificate-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    flex: 0 0 auto;
+}
+
+.certificate-description {
+    margin-right: 1rem;
+}
+
+.certificate-image img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+.project-item {
+    margin: 2rem 0;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+}
+
+.project-images {
+    flex: 1;
+    overflow: hidden;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.contact-info a {
+    color: #1F4068; /* Deep blue accent */
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #03045e;
-    color: white;
+    padding: 1rem;
+    background-color: #1B263B; /* Darker background */
+    color: #E0E1DD; /* Light text color */
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
     }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
     }
-    to {
-        transform: translateX(0);
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-category {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .certificates-slider, .project-content {
+        flex-direction: column;
     }
 }
