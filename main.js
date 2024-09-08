@@ -1,47 +1,44 @@
-// jQuery is required for this script
-$(document).ready(function() {
-    // Certificates Slider
-    let $certificatesSlider = $('.certificates-slider');
-    let scrollAmount = 200; // Amount to scroll on each scroll action
+document.addEventListener('DOMContentLoaded', () => {
+    const certificateContainer = document.querySelector('.certificates-slider');
+    const certificateItems = document.querySelectorAll('.certificate-item');
+    const totalCertificates = certificateItems.length;
+    let currentIndex = 0;
 
-    function scrollCertificates() {
-        $certificatesSlider.animate({
-            scrollLeft: '+=' + scrollAmount
-        }, 800);
-    }
-
-    function scrollCertificatesBack() {
-        $certificatesSlider.animate({
-            scrollLeft: '-=' + scrollAmount
-        }, 800);
-    }
-
-    // Auto-scroll certificates slider every 5 seconds
-    setInterval(scrollCertificates, 5000);
-
-    // Project Image Carousel
-    let $projectImages = $('.project-images');
-    let $projectImagesImgs = $projectImages.find('img');
-    let imgIndex = 0;
-
-    function rotateProjectImages() {
-        $projectImagesImgs.eq(imgIndex).fadeOut(600, function() {
-            imgIndex = (imgIndex + 1) % $projectImagesImgs.length;
-            $projectImagesImgs.eq(imgIndex).fadeIn(600);
+    // Function to show the current certificate
+    function showCertificate(index) {
+        certificateItems.forEach((item, i) => {
+            item.style.transform = `translateX(${-(index * 100)}%)`;
         });
     }
 
-    // Start image rotation every 3 seconds
-    setInterval(rotateProjectImages, 3000);
+    // Initialize the slider to show the first certificate
+    showCertificate(currentIndex);
 
-    // Smooth scroll for navigation links
-    $('nav a').on('click', function(event) {
-        event.preventDefault();
-        let targetId = $(this).attr('href');
-        let $target = $(targetId);
+    // Click event on the container to navigate right or left
+    certificateContainer.addEventListener('click', (event) => {
+        const containerWidth = certificateContainer.offsetWidth;
+        const clickX = event.clientX - certificateContainer.getBoundingClientRect().left;
 
-        $('html, body').animate({
-            scrollTop: $target.offset().top - $('header').outerHeight()
-        }, 800);
+        if (clickX > containerWidth / 2) {
+            // Clicked on the right half of the container
+            if (currentIndex < totalCertificates - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back to the first certificate
+            }
+        } else {
+            // Clicked on the left half of the container
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalCertificates - 1; // Loop back to the last certificate
+            }
+        }
+        showCertificate(currentIndex);
     });
+
+    // Optional: Auto-slide functionality
+    setInterval(() => {
+        certificateContainer.click(); // Simulate a click to move to the next certificate
+    }, 5000); // Change every 5 seconds
 });
