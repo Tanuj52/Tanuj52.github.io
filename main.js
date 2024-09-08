@@ -1,44 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const certificateContainer = document.querySelector('.certificates-slider');
-    const certificateItems = document.querySelectorAll('.certificate-item');
-    const totalCertificates = certificateItems.length;
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing slider functionality for certifications
+    const sliderWrapper = document.querySelector('.certificate-wrapper');
+    const slides = Array.from(document.querySelectorAll('.certificate-item'));
+    let slideWidth = slides[0].offsetWidth;
     let currentIndex = 0;
 
-    // Function to show the current certificate
-    function showCertificate(index) {
-        certificateItems.forEach((item, i) => {
-            item.style.transform = `translateX(${-(index * 100)}%)`;
+    function updateSlidePosition() {
+        sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function recalculateSlideWidth() {
+        slideWidth = slides[0].offsetWidth;
+        updateSlidePosition(); // Reposition the slides after recalculation
+    }
+
+    document.querySelector('.slide-area.left').addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlidePosition();
+        }
+    });
+
+    document.querySelector('.slide-area.right').addEventListener('click', function() {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            updateSlidePosition();
+        }
+    });
+
+    // Recalculate slide width on window resize
+    window.addEventListener('resize', recalculateSlideWidth);
+
+    // New functionality for project images slider
+    const projectImages = Array.from(document.querySelectorAll('.project-images img'));
+    let imageIndex = 0;
+    const imageInterval = 3000; // Interval for automatic sliding (3 seconds)
+
+    function showNextImage() {
+        imageIndex = (imageIndex + 1) % projectImages.length; // Loop back to the first image
+        updateImageDisplay();
+    }
+
+    function updateImageDisplay() {
+        projectImages.forEach((img, index) => {
+            img.style.display = index === imageIndex ? 'block' : 'none';
         });
     }
 
-    // Initialize the slider to show the first certificate
-    showCertificate(currentIndex);
+    // Initialize the display
+    updateImageDisplay();
 
-    // Click event on the container to navigate right or left
-    certificateContainer.addEventListener('click', (event) => {
-        const containerWidth = certificateContainer.offsetWidth;
-        const clickX = event.clientX - certificateContainer.getBoundingClientRect().left;
+    // Automatic sliding
+    setInterval(showNextImage, imageInterval);
 
-        if (clickX > containerWidth / 2) {
-            // Clicked on the right half of the container
-            if (currentIndex < totalCertificates - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Loop back to the first certificate
-            }
-        } else {
-            // Clicked on the left half of the container
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalCertificates - 1; // Loop back to the last certificate
-            }
-        }
-        showCertificate(currentIndex);
+    // Click functionality for manual control (if desired)
+    projectImages.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            imageIndex = (index + 1) % projectImages.length; // Move to the next image
+            updateImageDisplay();
+        });
     });
-
-    // Optional: Auto-slide functionality
-    setInterval(() => {
-        certificateContainer.click(); // Simulate a click to move to the next certificate
-    }, 5000); // Change every 5 seconds
 });
