@@ -75,12 +75,16 @@ nav ul li a:hover {
 }
 
 .description h1 {
-    color: #E0E1DD; /* Light text color */
+    color: #660000; /* Light text color */
     font-size: 2.5rem; /* Larger font size */
+}
+.description h2 {
+    color: #b1a7a6; /* Light text color */
+    font-size: 2rem; /* Larger font size */
 }
 
 .description p {
-    color: #E0E1DD; /* Light text color */
+    color: #d3d3d3; /* Light text color */
     font-size: 1.2rem; /* Adjust as needed */
 }
 
@@ -106,7 +110,7 @@ nav ul li a:hover {
 
 .skill-box {
     background-color: #1B263B; /* Darker container background */
-    color: #E0E1DD; /* Light text color */
+    color: #d3d3d3; /* Light text color */
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
     border-radius: 5px;
@@ -137,7 +141,7 @@ nav ul li a:hover {
 }
 
 .certificate-description {
-    color: #E0E1DD; /* Light text color */
+    color: #d3d3d3; /* Light text color */
     padding: 1rem;
     background: #1B263B; /* Darker background */
     border-radius: 5px;
@@ -190,7 +194,7 @@ nav ul li a:hover {
 
 .project-description {
     flex: 1;
-    color: #E0E1DD; /* Light text color */
+    color:#d3d3d3; /* Light text color */
 }
 
 /* Contact Section */
@@ -229,8 +233,8 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #1B263B; /* Darker background */
-    color: #E0E1DD; /* Light text color */
+    background-color: #220901; /* Darker background */
+    color: #b1a7a6; /* Light text color */
 }
 
 /* Responsive Design */
