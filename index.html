@@ -4,106 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="certifications.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+    <script defer src="main.js"></script>
+    <script defer src="about.js"></script>
+    <script defer src="skills.js"></script>
+    <script defer src="certifications.js"></script>
+    <script defer src="projects.js"></script>
+    <script defer src="contact.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-container">
-                <a href="#about" class="nav-logo">My Portfolio</a>
-                <ul class="nav-menu">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="about" class="section">
-        <div class="cover-image">
-            <img src="cover-image.jpg" alt="Cover Image">
-        </div>
-        <div class="profile-info">
-            <img src="profile-image.jpg" alt="Profile Picture" class="profile-img">
-            <div class="description">
-                <h1>Welcome to My Portfolio</h1>
-                <p>I'm [Your Name], an aspiring Full-Stack Developer, Cybersecurity Analyst, and Data Analyst.</p>
+    <main>
+        <section id="about">
+            <!-- About Me Section -->
+            <div class="cover-image">
+                <img src="cover-image.jpg" alt="Cover Image">
             </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skills-group">
-                <h3>Full-Stack Development</h3>
-                <div class="skill-box">HTML</div>
-                <div class="skill-box">CSS</div>
-                <div class="skill-box">JavaScript</div>
-                <!-- Add more skills here -->
-            </div>
-            <div class="skills-group">
-                <h3>Data Analysis</h3>
-                <div class="skill-box">Python</div>
-                <div class="skill-box">SQL</div>
-                <div class="skill-box">Excel</div>
-                <!-- Add more skills here -->
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="section">
-        <h2>Certifications</h2>
-        <div class="certificates-slider">
-            <!-- Example certificate -->
-            <div class="certificate">
-                <div class="certificate-description">
-                    <h3>Certification Title</h3>
-                    <p>Brief description of the certification.</p>
+            <div class="profile">
+                <div class="description">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Brief description about yourself and your skills.</p>
                 </div>
-                <div class="certificate-image">
-                    <img src="certification-image.jpg" alt="Certification">
+                <div class="profile-pic">
+                    <img src="profile-pic.jpg" alt="Profile Picture">
                 </div>
             </div>
-            <!-- Add more certificates here -->
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <div class="project-content">
-                <div class="project-images">
-                    <!-- Slider for project images -->
-                    <img src="project-image1.jpg" alt="Project Image 1">
-                    <img src="project-image2.jpg" alt="Project Image 2">
-                    <!-- Add more images here -->
+        <section id="skills">
+            <!-- Skills Section -->
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <!-- Full Stack Development Skills -->
+                <div class="skills-category">
+                    <h3>Full Stack Development</h3>
+                    <div class="skill-box">HTML</div>
+                    <div class="skill-box">CSS</div>
+                    <div class="skill-box">JavaScript</div>
+                    <!-- Add more skills as needed -->
                 </div>
-                <div class="project-description">
-                    <p>Brief description of the project.</p>
+                <!-- Data Analysis Skills -->
+                <div class="skills-category">
+                    <h3>Data Analysis</h3>
+                    <div class="skill-box">Python</div>
+                    <div class="skill-box">R</div>
+                    <div class="skill-box">SQL</div>
+                    <!-- Add more skills as needed -->
                 </div>
             </div>
-        </div>
-        <!-- Add more projects here -->
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-            <a href="https://www.linkedin.com/in/krtanuj/" class="contact-link">LinkedIn</a>
-            <p>Email: rangatanuj5110@gmail.com</p>
-            <p>Phone: +91 8367016224</p>
-        </div>
-    </section>
+        <section id="certifications">
+            <!-- Certifications Section -->
+            <h2>Certifications</h2>
+            <div class="certificates-slider">
+                <!-- Certificate Item -->
+                <div class="certificate-item">
+                    <div class="certificate-description">
+                        <p>Brief description of the certification.</p>
+                    </div>
+                    <div class="certificate-image">
+                        <img src="certification1.jpg" alt="Certification Image">
+                    </div>
+                </div>
+                <!-- Add more certificate items as needed -->
+            </div>
+        </section>
+
+        <section id="projects">
+            <!-- Projects Section -->
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Project Title</h3>
+                <div class="project-content">
+                    <div class="project-images">
+                        <img src="project-screenshot1.jpg" alt="Project Screenshot">
+                        <!-- Add more screenshots as needed -->
+                    </div>
+                    <div class="project-description">
+                        <p>Brief description of the project.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+
+        <section id="contact">
+            <!-- Contact Me Section -->
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+                <p>Contact Number: Your Contact Number</p>
+                <p>Email: your.email@example.com</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Kasula Ranga Tanuj. All rights reserved.</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
